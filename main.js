@@ -6,8 +6,6 @@ fetch(url).then(object => object.json()).then((object)=>{
 var totalquestions=0;
 var quesdone=0;
 function questionrender(object){
-    alert("Bookmarks and search options are not functional");
-    
     object.data.forEach((quest)=>{
         const parent =document.querySelector('.accordian');
         const onecat =document.createElement('div');
