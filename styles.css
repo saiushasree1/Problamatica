@@ -1,0 +1,231 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+#home{
+    position: relative;
+    width:100%;
+    min-height:100vh;
+    padding:100px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#e4ddd0;
+}
+#home.change{
+    background-color: rgb(16, 14, 14);
+}
+
+header h1{
+    font-family:Lilita One;
+    color: goldenrod;
+    font-size: 150%;
+}
+header{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 100px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6b320c;
+    box-shadow:#9e9fa5 0px 7px 10px;
+}
+header.change{
+    background-color: #1f0642;
+    box-shadow: #08162a 0px 7px 10px;
+}
+header ul{
+    position:relative;
+    display:flex;
+}
+header ul li{
+    list-style: none;
+}
+header label{
+    color:black;
+    margin-left:13px;
+}
+header label.change{
+    color:#de961a;
+}
+header input{
+    margin-left:10px;
+}
+ header a{
+    text-decoration: none;
+    color:black;
+    display:inline-block;
+    margin-left:20px;
+    padding: 0 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header.change a{
+    color:maroon;
+}
+header a:hover{
+
+    color:#fff;
+    border-style:none none solid none;
+    border-radius:3px;
+    border-width: 3px;
+    border-color: maroon;
+    transition: 0.5s;
+} 
+header input{
+    width:80%;
+    padding:5px;
+    border-radius: 5px;
+    border-style:none;
+    border-width: 2px;
+    border-color: black;
+}
+header input:hover{
+    border-style:solid;
+    border-color: brown;
+}
+.accordian{
+    width:100%;
+    position:relative;
+}
+.accordian .rendered{
+    position: relative;
+    margin: 10px 20px;
+}
+.accordian .rendered .label{
+    position: relative;
+    padding: 10px;
+    background:#DDE6ED;
+    color:black;
+    cursor:pointer;
+    border-radius:5px;
+}
+.accordian .rendered .label::before{
+    content:'+';
+    position: absolute;
+    top:50%;
+    right:20px;
+    transform: translateY(-50%);
+    
+}
+.accordian .rendered.active .label::before{
+    content:'-';
+    position: absolute;
+    
+}
+.accordian .rendered .question{
+    position: relative;
+    background-color: antiquewhite;
+    height:0;
+    overflow:hidden;
+    transition: 0.5s;
+    overflow-y:auto;
+    border-radius: 5px;
+    transition: 0.7s ease-in-out;
+}
+.accordian .rendered.active .question{
+    height:fit-content;
+    padding:10px;
+}
+.toggle{
+    width:60px;
+    height:30px;
+    background-color: gainsboro;
+    border-radius: 20px;
+    
+}
+.toggle .inner{
+    width:30px;
+    height:30px;
+    background-color: #fff;
+    border-radius:50%;
+    transition:0.5s ease-in-out;
+}
+.toggle.activer{
+    background-color:#DAC0A3;
+}
+.toggle.activer .inner{
+    margin-left: 30px;
+}
+table{
+    width:80%;
+    position:relative;
+    left:10%;
+    top:2%;
+}
+tr{
+    padding:20px;
+    background-color: #e0e0e0;
+    box-shadow: #DDE6ED 0px 1px 1px;
+    margin-bottom: 3px;
+    color: #030910;
+}
+td{
+    padding:15px;
+    align-items: center;
+    width:fit-content;
+    border-radius: 2px;
+}
+.maint{
+    min-width: 60%;
+}
+.mat img{
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    display:inline-block;
+}
+.done{
+    background-color: rgb(19, 203, 127);
+}
+.buttonc{
+    background-color: transparent;
+    border-radius: 50%;
+    border-width: 0px;
+    align-items:center;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor:pointer;
+}
+.progress{
+    width:100%;
+    height:fit-content;
+    position:fixed;
+    left:0%;
+    top:15%;
+    background-color: #f6f6f7;
+    box-shadow: #f2f0f0 0px 5px 6px;
+    z-index:1;
+    display:flex;
+    align-items: center;
+    margin:5px;
+    padding:5px;
+}
+.progress .change{
+    background-color: #08162a;
+    width:100%;
+    padding:5px;
+}
+.progressbar{
+    width:50%;
+    height:30px;
+    position:relative;
+    left:20%;
+    overflow:hidden;
+    background-color: #DDE6ED;
+}
+.fill{
+    width:0%;
+    height:100%;
+    background-color: #3f0284;
+    position: absolute;
+}
+.filltext{
+    position: absolute;
+    right:2%;
+    top:15%;
+    color:#de961a;
+}
